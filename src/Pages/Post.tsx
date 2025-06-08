@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import Titulo from '../Components/Titulo'
 import Lista from '../Components/Lista'
-import Button from '../Components/Button';
+
 
 export default function PagePost() {
     return (

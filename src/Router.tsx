@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import App from './App'
+
 import Post from './Pages/Post'
 import Dados from './Pages/Dados'
 

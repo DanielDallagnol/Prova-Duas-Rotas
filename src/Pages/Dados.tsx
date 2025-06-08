@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Box, Typography } from "@mui/material";
+import {Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import Titulo from '../Components/Titulo'
 import Alert from '../Components/Alert'
+import Box from '../Components/Box'
 
 type PostaDados = {
     userId: number;
@@ -30,7 +31,7 @@ export default function PageDados() {
         return (
             <div>
 
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 5, alignContent: 'center', alignItems: 'center' }}>
+                <Box>
                     <Alert texto={"Carregando detalhes do post..."}></Alert>
                 </Box>
             </div>)
@@ -41,7 +42,7 @@ export default function PageDados() {
     return (
         <div>
 
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 5, alignContent: 'center', alignItems: 'center' }}>
+            <Box>
                 <Titulo texto={post.title}></Titulo>
 
                 <Typography variant="subtitle2">Post ID: {post.id}</Typography>

@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import {Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
-import Titulo from '../Components/Titulo'
 import Alert from '../Components/Alert'
 import Box from '../Components/Box'
 import Card from '../Components/Card'

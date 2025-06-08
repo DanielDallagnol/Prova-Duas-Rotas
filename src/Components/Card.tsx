@@ -1,5 +1,4 @@
 import { Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
-import Titulo from '../Components/Titulo'
 
 interface ButtonsProps {
 

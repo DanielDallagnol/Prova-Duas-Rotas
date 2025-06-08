@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import Titulo from '../Components/Titulo'
+import Alert from '../Components/Alert'
 
 type PostaDados = {
     userId: number;
@@ -30,7 +31,7 @@ export default function PageDados() {
             <div>
 
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 5, alignContent: 'center', alignItems: 'center' }}>
-                    <Titulo texto="Carregando detalhes do post..."></Titulo>
+                    <Alert texto={"Carregando detalhes do post..."}></Alert>
                 </Box>
             </div>)
     }

@@ -5,8 +5,9 @@ interface TitleProps {
   
   export default function ComponentTitle({texto}: TitleProps) {
     return (
-      
+      <div>
       <h2>{texto}</h2>
+      </div>
   
     );
   }

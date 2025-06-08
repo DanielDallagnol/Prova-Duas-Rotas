@@ -11,6 +11,8 @@ export function ExportaRouter() {
       <Routes>
         <Route path="/" element={<Post />} />
         <Route path="/dados" element={<Dados />} />
+        <Route path="/dados/:id" element={<Dados />} />
+
 
         <Route path="*" element={<h2 color='black'>404 Página não encontrada</h2>} />
       </Routes>

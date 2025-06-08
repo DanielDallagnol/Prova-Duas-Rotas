@@ -12,9 +12,9 @@ interface ButtonsProps {
 
             
         <Alert variant="filled" severity="info">
-        <LinearProgress />
         {texto}
       </Alert>
+      <LinearProgress />
       </div>
     );
   }

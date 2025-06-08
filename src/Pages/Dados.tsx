@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Titulo from '../Components/Titulo'
 import Alert from '../Components/Alert'
 import Box from '../Components/Box'
+import Card from '../Components/Card'
 
 type PostaDados = {
     userId: number;
@@ -43,13 +44,13 @@ export default function PageDados() {
         <div>
 
             <Box>
-                <Titulo texto={post.title}></Titulo>
 
-                <Typography variant="subtitle2">Post ID: {post.id}</Typography>
-                <Typography variant="subtitle2">User ID: {post.userId}</Typography>
-                <Typography variant="body1" sx={{ whiteSpace: "pre-line" }}>
-                    {post.body}
-                </Typography>
+
+              <Card titulo={post.title} textoMeio={post.body} postID={post.id} postUserID={post.userId}></Card>
+
+
+
+
             </Box>
         </div>
     );

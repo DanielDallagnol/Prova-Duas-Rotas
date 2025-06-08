@@ -1,4 +1,4 @@
-import { Alert } from "@mui/material";
+import { Alert,  LinearProgress } from "@mui/material";
 
 interface ButtonsProps {
     
@@ -8,9 +8,13 @@ interface ButtonsProps {
   
   export default function ComponentAlert({texto }: ButtonsProps) {
     return (
-      
+        <div>
+
+            
         <Alert variant="filled" severity="info">
+        <LinearProgress />
         {texto}
       </Alert>
+      </div>
     );
   }

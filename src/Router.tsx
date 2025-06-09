@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Post from './Pages/Post'
 import Dados from './Pages/Dados'
+import PrimeiraPagina from './Pages/PrimeiraPagina'
 
 
 
@@ -9,7 +10,8 @@ export function ExportaRouter() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Post />} />
+      <Route path="/" element={<PrimeiraPagina />} />
+        <Route path="/post" element={<Post />} />
         <Route path="/dados" element={<Dados />} />
         <Route path="/dados/:id" element={<Dados />} />
 

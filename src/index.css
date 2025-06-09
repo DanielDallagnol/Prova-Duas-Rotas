@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -6,7 +9,7 @@
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
   background-color: #ffffff;
-  background: linear-gradient(90deg,rgb(99, 79, 255),rgb(21, 2, 168));
+  background: linear-gradient(90deg,#a87cff,#5500ff);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

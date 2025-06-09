@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText, Typography,} from '@mui/material';
 import React from 'react';
 
+
 type PostaDados = {
   id: number;
   title: string;
@@ -19,17 +20,15 @@ export default function ComponentList() {
   }, []);
 
   return (
-    <List sx={{ width: '100%', maxWidth: 600, bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%', maxWidth: 600, bgcolor: 'background.paper'}}>
       {posts.map((postaDados, index) => (
 
 
         <React.Fragment key={postaDados.id}>
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
+            <Avatar alt="Remy Sharp" src="https://img.freepik.com/photos-gratuite/vue-du-cameleon-couleurs-neons-vives_23-2151682767.jpg?semt=ais_hybrid&w=740" />
 
-              {/* Avatar genérico com uma letra */}
-
-              <Avatar>{postaDados.title.charAt(0).toUpperCase()}</Avatar>
             </ListItemAvatar>
 
 

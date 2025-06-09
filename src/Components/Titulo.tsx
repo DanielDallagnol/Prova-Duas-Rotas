@@ -1,14 +1,20 @@
-interface TitleProps {
-    texto: string;
+import { Typography } from "@mui/material";
 
-  }
-  
-  export default function ComponentTitle({texto}: TitleProps) {
-    return (
-      <div>
-      <h2>{texto}</h2>
-      </div>
-  
-    );
-  }
-  
+interface TitleProps {
+  texto: string;
+
+}
+
+export default function ComponentTitle({ texto }: TitleProps) {
+  return (
+    <div>
+      
+      <Typography sx={{}} variant="h3" component="h2">
+        {texto}
+      </Typography>
+
+      
+    </div>
+
+  );
+}

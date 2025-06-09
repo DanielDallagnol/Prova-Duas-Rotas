@@ -1,30 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import CommentIcon from '@mui/icons-material/Comment';
-import IconButton from '@mui/material/IconButton';
-
+import {Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText, Typography,} from '@mui/material';
+import React from 'react';
 
 type PostaDados = {
-    id: number;
-    title: string;
-    body: string;
-    // pode adicionar mais se quiser
-  };
-
-
-
-
+  id: number;
+  title: string;
+  body: string;
+};
 
 export default function ComponentList() {
-  //ANTIGA TAVA ASSIM: const [posts, setPosts] = useState([]);
   const [posts, setPosts] = useState<PostaDados[]>([]);
-
-
-
-///Isso pega os dados da API assim que o componente é montado.
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -33,33 +19,52 @@ export default function ComponentList() {
   }, []);
 
   return (
+    <List sx={{ width: '100%', maxWidth: 600, bgcolor: 'background.paper' }}>
+      {posts.map((postaDados, index) => (
 
-   
+
+        <React.Fragment key={postaDados.id}>
+          <ListItem alignItems="flex-start">
+            <ListItemAvatar>
+
+              {/* Avatar genérico com uma letra */}
+
+              <Avatar>{postaDados.title.charAt(0).toUpperCase()}</Avatar>
+            </ListItemAvatar>
 
 
-    <List sx={{ width: '100%', maxWidth: 600, bgcolor: 'background.paper',background:'#f0f0f0aa'}}>
-    
+            <ListItemText
+              primary={
+                <Link
+                  to={`/dados/${postaDados.id}`}
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  {postaDados.title}
+                </Link>
+              }
 
-    {/*Substituí o array fixo [1, 2, 3] que veio no componente original pelo array posts:*/}
-      {posts.map((postaDados) => (      
-        <ListItem
-          key={postaDados.id}  
-          disableGutters
-          secondaryAction={
-            <IconButton aria-label="comment">
-              <CommentIcon />
-            </IconButton>
-          }
-        >
 
-            {/*AQUI Q ELE PEGA O LINK QUE VAI ENVIAR*/}
-          <Link
-            to={`/dados/${postaDados.id}`}
-            style={{ textDecoration: 'none', color: 'inherit'}}
-          >
-            <ListItemText primary={postaDados.title} />
-          </Link>
-        </ListItem>
+              secondary={
+                <React.Fragment>
+                  <Typography
+                    component="span"
+                    variant="body2"
+                    sx={{ color: 'text.primary', display: 'inline' }}
+                  >
+                    Autor desconhecido
+                  </Typography>
+                  {` — ${postaDados.body.slice(0, 50)}...`}
+                </React.Fragment>
+              }
+            />
+          </ListItem>
+
+
+
+
+          {/*só pra deixar bonito e não ultrapassar o tamanho do box*/}
+          {index < posts.length - 1 && <Divider variant="inset" component="li" />}
+        </React.Fragment>
       ))}
     </List>
   );

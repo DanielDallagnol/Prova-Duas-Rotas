@@ -1,55 +1,83 @@
-# React + TypeScript + Vite
+# Prova Duas Rotas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação em **React + TypeScript** desenvolvida para estudo e prática de **roteamento**, **componentização** e **boas práticas de versionamento**, utilizando Vite e integração contínua com deploy automático no Vercel.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Deploy
+**Produção:** [https://prova-duas-rotas.vercel.app](https://prova-duas-rotas.vercel.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📌 Funcionalidades
+- Roteamento com `react-router-dom` (duas rotas principais)
+- Componentes reutilizáveis:
+  - `Box`
+  - `Card`
+  - `Alert`
+  - `Loading Bar`
+- Estilização customizada
+- Alerts dinâmicos
+- Paginação
+- Deploy automatizado no **Vercel** a cada push na branch `main`
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠 Tecnologias
+- **React 18**
+- **TypeScript**
+- **Vite**
+- **React Router DOM**
+- **ESLint + Prettier**
+- **Vercel** (deploy automático)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-teste
+## 📂 Estrutura de Pastas
+src/
+components/
+Alert.tsx
+Box.tsx
+Card.tsx
+LoadingBar.tsx
+pages/
+Lista.tsx
+Post.tsx
+routes/
+router.tsx
+App.tsx
+main.tsx
+
+
+---
+
+## 📈 Fluxo de Desenvolvimento
+O projeto segue **Conventional Commits** para padronização e rastreabilidade:
+
+- `feat:` novas funcionalidades  
+  Exemplo: `feat: add primeira pagina`
+- `fix:` correções e ajustes  
+  Exemplo: `fix: mudar a cor do alert`
+- `chore(release):` versionamento e releases  
+  Exemplo: `chore(release): 0.0.9`
+
+**Controle de Versão:**  
+- Versões incrementais `0.0.x` para cada entrega estável
+- Histórico de commits limpo e objetivo
+- Deploy automático configurado no Vercel
+
+---
+
+## 📦 Como Rodar Localmente
+```bash
+# Clonar o repositório
+git clone https://github.com/DanielDallagnol/Prova-Duas-Rotas.git
+
+# Acessar a pasta
+cd Prova-Duas-Rotas
+
+# Instalar dependências
+npm install
+
+# Rodar o projeto
+npm run dev

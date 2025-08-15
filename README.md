@@ -10,7 +10,7 @@ Aplicação em **React + TypeScript** desenvolvida para estudo e prática de **r
 ---
 
 ## 📌 Funcionalidades
-- Roteamento com `react-router-dom` (duas rotas principais)
+- Roteamento com `react-router-dom` (duas rotas principais).
 - Componentes reutilizáveis:
   - `Box`
   - `Card`

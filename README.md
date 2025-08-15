@@ -31,29 +31,6 @@ Aplicação em **React + TypeScript** desenvolvida para estudo e prática de **r
 - **ESLint + Prettier**
 - **Vercel** (deploy automático)
 
----
-
-## 📂 Estrutura do projeto
-src/
-  Components/
-    Alert.tsx          # Componente de alerta com customização de cor
-    Box.tsx            # Componente de container para layout
-    Button.tsx         # Botão estilizado e reutilizável
-    Card.tsx           # Exibição de conteúdo em formato de card
-    Lista.tsx          # Lista dinâmica para exibir dados
-    Titulo.tsx         # Componente para títulos de página/seção
-  Pages/
-    Dados.tsx          # Página com dados carregados dinamicamente
-    Post.tsx           # Página para exibir conteúdo de post
-    PrimeiraPagina.tsx # Página inicial
-  assets/              # Imagens e recursos estáticos
-App.css                # Estilos globais
-App.tsx                # Componente raiz
-Router.tsx             # Configuração de rotas
-index.css              # Estilo base
-main.tsx               # Ponto de entrada da aplicação
-vite-env.d.ts          # Tipos para Vite
-
 
 
 ---
